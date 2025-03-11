@@ -58,7 +58,7 @@ nav a:hover {
 /* Fondo con blur */
 .hero::before {
     content: "";
-    background: url('/imagenes/galletasjuntas.jpg') no-repeat center center/cover; /* Imagen específica */
+    background: url('/galletasjuntas.jpg') no-repeat center center/cover; /* Imagen específica */
     position: absolute;
     top: 0;
     left: 0;
