@@ -1,0 +1,71 @@
+/* PRODUCTO SECCIÓN */
+.product-section {
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around; /* Alinea los productos en una fila con espacio entre ellos */
+    gap: 30px; /* Espacio entre los productos */
+    flex-wrap: wrap; /* Impide que los productos se apilen en pantallas pequeñas */
+    background-color: #fff;
+    margin: 0 20px; /* Agrega un margen lateral */
+}
+
+.product {
+    width: 300px; /* Ancho fijo para los productos */
+    text-align: center;
+    flex: 1;  /* Cada producto ocupa un espacio uniforme */
+    margin: 10px;  /* Espacio entre los productos */
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.product img:hover {
+    transform: scale(1.05); /* Efecto de zoom en la imagen */
+}
+
+.product h3 {
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.product p {
+    font-size: 16px;
+    color: #555;
+    margin: 10px 0;
+}
+
+.product .btn {
+    margin-top: 15px;
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.product .btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

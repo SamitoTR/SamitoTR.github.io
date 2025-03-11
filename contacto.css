@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    z-index: 10;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Fondo con blur */
+.hero::before {
+    content: "";
+    background: url('/imagenes/galletasjuntas.jpg') no-repeat center center/cover; /* Imagen específica */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px); /* Aplica el desenfoque */
+    z-index: -1;
+}
+
+/* Overlay para mejorar la visibilidad del texto */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Texto principal */
+.content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Botón con animación de zoom */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Efecto de zoom al pasar el cursor */
+.btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* SECCIÓN DE CONTACTO */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.contact-form {
+    display: inline-block;
+    max-width: 600px;
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #000;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 18px;
+    color: white;
+    background: black;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background: white;
+    color: black;
+    transform: scale(1.1); /* Efecto de zoom al pasar el mouse */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* SECCIÓN DE PRODUCTOS */
+.products-section {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.product-card {
+    width: 300px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 24px;
+    margin: 15px 0;
+}
+
+.product-card p {
+    font-size: 16px;
+    color: #555;
+}
+
+.product-card .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.product-card:hover {
+    transform: translateY(-10px); /* Efecto de elevación */
+}
+
+.product-card .btn:hover {
+    background-color: #555;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0 10px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
